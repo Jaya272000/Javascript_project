@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      transition: 2s;
+    }
+    .main{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-top: 300px;
+
+    }
+    .container{
+      height: 150px; 
+      width: 30%;
+      background-color: white;
+    }
+     h3{
+      margin-top: 30px;
+      font-size: 1.9rem;
+    }
+    button{
+      border: none;
+      width: 400px;
+      height: 60px;
+      background-color: black;
+      color: white;
+      font-size: 1.5rem;
+      box-shadow:inset;
+
+    }
+
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="container">
+      <h3 id="color-code">#949baa</h3>
+      <button id="btn">Click Me</button>
+    </div>
+  </div>
+  <script>
+    function getcolor(){
+      const random=Math.floor(Math.random()*16777215);
+      const randoc='#'+random.toString(16);
+      document.body.style.backgroundColor=randoc;
+      document.getElementById('color-code').innerText=randoc
+    }
+    document.getElementById('btn').addEventListener(
+      'click',getcolor
+    )
+    getcolor();  
+
+  </script>
+</body>
+</html>

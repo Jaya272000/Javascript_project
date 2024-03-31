@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blub On OFF</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+    }
+    .container{
+      text-align: center;
+      margin-top: 80px;
+      
+    }
+    img{
+      height: 40vh;
+      width: 40vw;
+    }
+    .btn{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      gap: 10px;
+      border: none;
+      margin-top: 20px;
+    
+
+    }
+    button{
+      height: 30px;
+      width: 90px;
+      background-color: blue;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="">
+    <div class="btn">
+      <button class="bulb_on">ON</button>
+      <button class="bulb_off">OFF</button>
+
+
+
+    </div>
+  </div>
+
+  <script>
+    const onblub=document.querySelector(".bulb_on")
+    const offbulb=document.querySelector(".bulb_off")
+    onblub.addEventListener('click',heyblubon)
+    offbulb.addEventListener('click',heybuldoff)
+    const image=document.querySelector('img')
+    function heyblubon(){
+      console.log('bulb is on')
+      image.src="https://i.pinimg.com/736x/8b/e0/60/8be0603fa9222908eac38746f7c72c2a.jpg"
+    }
+    function heybuldoff(){
+      console.log('bulb is off')
+      image.src="https://5.imimg.com/data5/SELLER/Default/2022/7/YJ/YE/SS/154438590/philips-b22-gls-incandescent-bulb.jpg"
+    }
+  </script>
+  
+</body>
+</html>

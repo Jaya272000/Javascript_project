@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      background-color: rgb(131, 201, 251);
+    }
+    .main{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-top: 300px;
+    }
+
+    .container{
+      text-align: center;
+      height: 250px;
+      width: 50%;
+      background-color: black;
+    }
+    .count{
+      margin-top: 30px;
+      font-size:3rem;
+      color: white;
+
+
+    }
+    .counter_preview{
+      color: white;
+      font-size: 90px;
+      
+    }
+    .btn{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      gap: 20px;
+      border: none;
+
+    }
+    button{
+                                                                                                                                                                  height: 30px;
+                                                                                                                                                                  width: 90px;
+
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="container">
+      <h1 class="count">Counter</h1>
+      <p class="counter_preview">0</p>
+      <div class="btn">
+        <button class="Dec">Decrment</button>
+        <button class="empty">Reset</button>
+        <button class="inc">Increment</button>
+
+      </div>
+    </div>
+  </div>
+  <script>
+    const display=document.querySelector('.counter_preview')
+    const incrementbtn=document.querySelector(".inc")
+    const decrementbtn=document.querySelector(".Dec")
+    const restbtn=document.querySelector('.empty')
+    incrementbtn.addEventListener('click',Increments);
+    decrementbtn.addEventListener('click',decremets);
+    restbtn.addEventListener('click',reset);
+    let value=0;
+    function Increments(){
+      value+=1
+      display.textContent=value;
+    }  
+    function decremets(){
+      value-=1
+      display.textContent=value;
+    }
+    function reset(){
+      value=0
+      display.textContent=value;
+    }
+  </script>
+</body>
+</html>
